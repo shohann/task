@@ -25,7 +25,12 @@ module.exports.signUp = async (req, res, next) => {
             token: token
         })
     } catch (error) {
-        next(error)
+        if (error.code === 11000) {
+            next(new Conflict('There is a account with this email'))
+        } else {
+            next(error)
+        }
+        
     }
 }
 

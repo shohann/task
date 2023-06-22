@@ -9,7 +9,7 @@ dotenv.config();
 const port = process.env.PORT;
 const DBUrl = process.env.DB_URL;
 
-app.use(express.static('public'))
+app.use(express.static('/public'))
 app.use(express.json()); 
 app.use(express.urlencoded({ extended: true }));
 

@@ -1,0 +1,426 @@
+{
+	"info": {
+		"_postman_id": "f7e1dbe5-b408-4336-83ef-f006d0b90ba2",
+		"name": "test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15806712"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Sign up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"shohann\",\n    \"email\": \"shohanurr490@gmail.com\",\n    \"password\": \"12346\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://product-management-tgur.onrender.com/api/users/auth/signup",
+							"protocol": "https",
+							"host": [
+								"product-management-tgur",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"users",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Log In",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"shohanurr490@gmail.com\",\n    \"password\": \"12346\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://product-management-tgur.onrender.com/api/users/auth/login",
+							"protocol": "https",
+							"host": [
+								"product-management-tgur",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"users",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "Create category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OTQzNmJlYmQwZWQwNTBjMzBiZGE2NCIsImVtYWlsIjoic2hvaGFudXJyNDkwQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjg3NDUzNDIyLCJleHAiOjE2ODc0NjQyMjJ9.UOBCCm_i2hHW2HnIuF7DvIaxJz92L7EFuTf2CdkbCoU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "category_name",
+									"value": "abc & def",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/shohann/Desktop/project/second.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://product-management-tgur.onrender.com/api/categories",
+							"protocol": "https",
+							"host": [
+								"product-management-tgur",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OTQzNmJlYmQwZWQwNTBjMzBiZGE2NCIsImVtYWlsIjoic2hvaGFudXJyNDkwQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjg3NDUzNDIyLCJleHAiOjE2ODc0NjQyMjJ9.UOBCCm_i2hHW2HnIuF7DvIaxJz92L7EFuTf2CdkbCoU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://product-management-tgur.onrender.com/api/categories",
+							"protocol": "https",
+							"host": [
+								"product-management-tgur",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OTQzNmJlYmQwZWQwNTBjMzBiZGE2NCIsImVtYWlsIjoic2hvaGFudXJyNDkwQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjg3NDUzNDIyLCJleHAiOjE2ODc0NjQyMjJ9.UOBCCm_i2hHW2HnIuF7DvIaxJz92L7EFuTf2CdkbCoU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "category_name",
+									"value": "abc & 123477",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/shohann/Desktop/project/second.jpg"
+								},
+								{
+									"key": "is_active",
+									"value": "false",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://product-management-tgur.onrender.com/api/categories/64947db1e474f2ae1ed62fd3",
+							"protocol": "https",
+							"host": [
+								"product-management-tgur",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"categories",
+								"64947db1e474f2ae1ed62fd3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OTQzNmJlYmQwZWQwNTBjMzBiZGE2NCIsImVtYWlsIjoic2hvaGFudXJyNDkwQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjg3NDUzNDIyLCJleHAiOjE2ODc0NjQyMjJ9.UOBCCm_i2hHW2HnIuF7DvIaxJz92L7EFuTf2CdkbCoU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://product-management-tgur.onrender.com/api/categories/649450c8da44d52f6a5a5199",
+							"protocol": "https",
+							"host": [
+								"product-management-tgur",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"categories",
+								"649450c8da44d52f6a5a5199"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Create Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OTQzNmJlYmQwZWQwNTBjMzBiZGE2NCIsImVtYWlsIjoic2hvaGFudXJyNDkwQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjg3NDUzNDIyLCJleHAiOjE2ODc0NjQyMjJ9.UOBCCm_i2hHW2HnIuF7DvIaxJz92L7EFuTf2CdkbCoU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "abc",
+									"type": "text"
+								},
+								{
+									"key": "stock",
+									"value": "50",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "64947f03ecf78dd1d7a5deff",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/shohann/Desktop/project/newwww.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://product-management-tgur.onrender.com/api/products",
+							"protocol": "https",
+							"host": [
+								"product-management-tgur",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OTQzNmJlYmQwZWQwNTBjMzBiZGE2NCIsImVtYWlsIjoic2hvaGFudXJyNDkwQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjg3NDUzNDIyLCJleHAiOjE2ODc0NjQyMjJ9.UOBCCm_i2hHW2HnIuF7DvIaxJz92L7EFuTf2CdkbCoU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://product-management-tgur.onrender.com/api/products",
+							"protocol": "https",
+							"host": [
+								"product-management-tgur",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OTQzNmJlYmQwZWQwNTBjMzBiZGE2NCIsImVtYWlsIjoic2hvaGFudXJyNDkwQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjg3NDUzNDIyLCJleHAiOjE2ODc0NjQyMjJ9.UOBCCm_i2hHW2HnIuF7DvIaxJz92L7EFuTf2CdkbCoU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "abcde",
+									"type": "text"
+								},
+								{
+									"key": "stock",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "64947f03ecf78dd1d7a5deff",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/shohann/Desktop/project/newwww.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://product-management-tgur.onrender.com/api/products/64947f75ecf78dd1d7a5df05",
+							"protocol": "https",
+							"host": [
+								"product-management-tgur",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"products",
+								"64947f75ecf78dd1d7a5df05"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OTQzNmJlYmQwZWQwNTBjMzBiZGE2NCIsImVtYWlsIjoic2hvaGFudXJyNDkwQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjg3NDUzNDIyLCJleHAiOjE2ODc0NjQyMjJ9.UOBCCm_i2hHW2HnIuF7DvIaxJz92L7EFuTf2CdkbCoU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://product-management-tgur.onrender.com/api/products/64947f75ecf78dd1d7a5df05",
+							"protocol": "https",
+							"host": [
+								"product-management-tgur",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"products",
+								"64947f75ecf78dd1d7a5df05"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
